@@ -1,0 +1,448 @@
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Style untuk homepage */
+.home {
+  min-height: 100vh;
+  background: #006341;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(to right,
+    #006341 60%,
+    #ffc600 0
+  );
+  overflow: hidden;
+  margin-bottom: 0;
+}
+
+.hero-content {
+  padding-left: 10%;
+  max-width: 50%;
+  position: relative;
+  z-index: 2;
+  margin-top: 70px;
+}
+
+.hero-text h1 {
+  font-size: 120px;
+  color: white;
+  line-height: 1;
+  margin-bottom: 30px;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  opacity: 0;
+  animation: fadeInDown 0.8s ease forwards;
+}
+
+.hero-text h1 .highlight {
+  display: block;
+  color: #ffc600;
+  font-size: 120px;
+  opacity: 0;
+  animation: fadeInDown 0.8s ease forwards 0.3s;
+}
+
+.description-line {
+  color: white;
+  font-size: 24px;
+  margin: 15px 0;
+  font-weight: 400;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.description-line:nth-child(1) {
+  animation: fadeInUp 0.8s ease forwards 0.6s;
+}
+
+.description-line:nth-child(2) {
+  animation: fadeInUp 0.8s ease forwards 0.9s;
+}
+
+.description-line:nth-child(3) {
+  animation: fadeInUp 0.8s ease forwards 1.2s;
+}
+
+.description-line:nth-child(5) {
+  animation: fadeInUp 0.8s ease forwards 1.8s;
+}
+
+.see-more-btn {
+  background: #ffc600;
+  color: #006341;
+  border: none;
+  padding: 15px 40px;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 30px;
+  margin-top: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  opacity: 0;
+  animation: fadeIn 0.8s ease forwards 1.5s;
+}
+
+.see-more-btn:hover {
+  background: #ffcd2d;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Hapus style yang tidak diperlukan */
+.nav-btn,
+.slide-indicators,
+.social-links,
+.chicken-image {
+  display: none;
+}
+
+/* Tambahkan style untuk social media links */
+.social-links {
+  position: fixed;
+  right: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  z-index: 999;
+}
+
+.social-icon {
+  width: 40px;
+  height: 40px;
+  background: #006341;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-size: 18px;
+}
+
+.social-icon:hover {
+  background: white;
+  color: #006341;
+  transform: translateY(-3px);
+}
+
+/* Add hero image styles */
+.hero-image {
+  position: absolute;
+  right: 5%;
+  top: 50%;
+  transform: translateY(-40%);
+  width: 40%;
+  max-width: 700px;
+  z-index: 1;
+  margin-top: 35px;
+}
+
+.sandwich-image {
+  width: 100%;
+  height: auto;
+  animation: float 3s ease-in-out infinite;
+  filter: drop-shadow(0 10px 20px rgba(0,0,0,0.15));
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/* Responsive styles */
+@media (max-width: 1200px) {
+  .hero-image {
+    width: 50%;
+    right: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    padding-top: 100px;
+    height: auto;
+    min-height: 100vh;
+  }
+
+  .hero-content {
+    padding: 0 20px;
+    text-align: center;
+  }
+
+  .hero-image {
+    position: relative;
+    width: 90%;
+    margin: 40px auto;
+    right: auto;
+    top: auto;
+    transform: none;
+  }
+
+  .hero-text h1,
+  .hero-text h1 .highlight {
+    font-size: 60px;
+  }
+
+  .description-line {
+    font-size: 18px;
+  }
+
+  .see-more-btn {
+    padding: 12px 30px;
+    font-size: 16px;
+  }
+} 
+
+/* Keyframes untuk animasi */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+} 
+
+/* Animasi untuk setiap baris deskripsi */
+.description-line {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.description-line:nth-child(1) {
+  animation: fadeInUp 0.8s ease forwards 0.6s;
+}
+
+.description-line:nth-child(2) {
+  animation: fadeInUp 0.8s ease forwards 0.9s;
+}
+
+.description-line:nth-child(3) {
+  animation: fadeInUp 0.8s ease forwards 1.2s;
+}
+
+/* Tombol See More */
+.see-more-btn {
+  opacity: 0;
+  animation: fadeIn 0.8s ease forwards 1.5s;
+}
+
+/* Freshly made to order */
+.description-line:last-child {
+  animation: fadeInUp 0.8s ease forwards 1.8s;
+} 
+
+/* Savory Indonesia Section */
+.savory-indonesia {
+  padding: 80px 0;
+  background: #006341;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  margin-top: 0;
+}
+
+.savory-indonesia .section-title {
+  color: #ffc600;
+  font-size: 3rem;
+  margin-bottom: 50px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: relative;
+}
+
+.savory-indonesia .section-title::after,
+.savory-indonesia .section-title::before {
+  display: none;
+}
+
+.savory-indonesia .section-title {
+  text-decoration: none;
+  border-bottom: none;
+}
+
+.slider-container {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 60px;
+}
+
+.slider {
+  position: relative;
+  height: 700px;
+  overflow: hidden;
+  border-radius: 20px;
+  background: transparent;
+  box-shadow: none;
+}
+
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+  padding: 20px;
+  background: transparent;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+.slide img {
+  width: 90%;
+  height: 90%;
+  object-fit: contain;
+  border-radius: 15px;
+  background: transparent;
+  padding: 10px;
+  box-shadow: none;
+  margin: 0 auto;
+  display: block;
+}
+
+.slider-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #006341;
+  color: white;
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 2;
+  font-size: 1.5rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.slider-button:hover {
+  background: #00513a;
+  transform: translateY(-50%) scale(1.1);
+}
+
+.slider-button.prev {
+  left: 0;
+}
+
+.slider-button.next {
+  right: 0;
+}
+
+.slider-dots {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 15px;
+  z-index: 10;
+}
+
+.dot {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: transparent;
+  border: 2px solid #ffc600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.dot.active {
+  background: #ffc600;
+  transform: scale(1.2);
+}
+
+/* Responsive styles */
+@media (max-width: 1200px) {
+  .slider {
+    height: 600px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2.5rem;
+  }
+
+  .slider {
+    height: 500px;
+  }
+
+  .slider-container {
+    padding: 0 40px;
+  }
+
+  .slider-button {
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .slider {
+    height: 400px;
+  }
+
+  .slider-container {
+    padding: 0 30px;
+  }
+} 

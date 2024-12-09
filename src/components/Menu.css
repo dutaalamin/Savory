@@ -1,0 +1,159 @@
+.menu-page {
+  padding-top: 100px;
+  min-height: 100vh;
+  background-color: #006341;
+}
+
+.menu-section {
+  background: #006341;
+  min-height: 100vh;
+  width: 100%;
+  padding: 120px 0 60px;
+}
+
+.menu-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 40px;
+  background: #006341;
+}
+
+.menu-grid {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 40px;
+  padding: 20px;
+  background: #006341;
+}
+
+.menu-card {
+  position: relative;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  height: 300px;
+}
+
+.menu-card:hover {
+  transform: translateY(-8px);
+}
+
+.menu-image-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.menu-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.menu-card:hover .menu-image {
+  transform: scale(1.1);
+}
+
+.menu-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, 
+    rgba(0, 99, 65, 0.95),
+    rgba(0, 99, 65, 0.2),
+    transparent
+  );
+  padding: 30px 20px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.menu-card:hover .menu-overlay {
+  opacity: 1;
+}
+
+.menu-overlay h3 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.view-menu-btn {
+  background: #ffc600;
+  color: #006341;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+}
+
+.view-menu-btn:hover {
+  background: white;
+  color: #006341;
+  border: 2px solid #ffc600;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .menu-section {
+    padding: 100px 0 40px;
+  }
+
+  .menu-container {
+    padding: 0 20px;
+  }
+
+  .menu-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 10px;
+  }
+  
+  .menu-overlay h3 {
+    font-size: 20px;
+  }
+
+  .view-menu-btn {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+} 
+
+.menu-title {
+  text-align: center;
+  color: white;
+  font-size: 3rem;
+  margin-bottom: 50px;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  text-transform: uppercase;
+  font-weight: 800;
+}
+
+/* Responsive styling untuk judul */
+@media (max-width: 768px) {
+  .menu-title {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    padding-top: 20px;
+  }
+} 
