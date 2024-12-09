@@ -79,16 +79,16 @@ function Home() {
 
         {/* Social Media Links */}
         <div className="social-links">
-          <a href="https://instagram.com/subway" target="_blank" rel="noopener noreferrer" className="social-icon">
+          <a href="https://instagram.com/instagram" target="_blank" rel="noopener noreferrer" className="social-icon">
             <FaInstagram />
           </a>
-          <a href="https://facebook.com/subway" target="_blank" rel="noopener noreferrer" className="social-icon">
+          <a href="https://facebook.com/facebook" target="_blank" rel="noopener noreferrer" className="social-icon">
             <FaFacebookF />
           </a>
-          <a href="https://twitter.com/subway" target="_blank" rel="noopener noreferrer" className="social-icon">
+          <a href="https://twitter.com/x" target="_blank" rel="noopener noreferrer" className="social-icon">
             <FaTwitter />
           </a>
-          <a href="/locations" className="social-icon">
+          <a href="https://www.google.com/maps/place/Jakarta,+Indonesia" target="_blank" rel="noopener noreferrer" className="social-icon">
             <FaMapMarkerAlt />
           </a>
         </div>
