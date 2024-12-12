@@ -92,6 +92,16 @@
 }
 
 @media (max-width: 768px) {
+  .navbar {
+    padding: 0 15px;
+  }
+
+  .navbar-container {
+    position: relative;
+    justify-content: center;
+    padding: 0 15px;
+  }
+
   .nav-left, .nav-right {
     display: none;
   }
@@ -100,13 +110,153 @@
     position: relative;
     left: 0;
     transform: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
-  .navbar-container {
-    justify-content: center;
+  .logo-container {
+    display: block;
+  }
+
+  .logo {
+    height: 28px;
+    display: block;
+  }
+
+  .menu-toggle {
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .mobile-menu.active {
+    display: block;
   }
 }
 
 .nav-left {
   margin-left: -40px;
+}
+
+/* Mobile Menu Styles */
+.mobile-menu {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100vh;
+  background: #006341;
+  z-index: 1001;
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+}
+
+.mobile-menu.active {
+  transform: translateX(0);
+  display: block;
+}
+
+.mobile-menu-content {
+  padding: 20px;
+  height: 100%;
+  overflow-y: auto;
+}
+
+.mobile-menu-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.close-btn {
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.mobile-menu-items {
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-item {
+  padding: 15px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu-item.has-submenu::after {
+  content: '\f078'; /* FontAwesome chevron down */
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  font-size: 12px;
+  color: white;
+}
+
+.mobile-menu-items .menu-item {
+  display: block;
+  color: white;
+  text-decoration: none;
+  padding: 15px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  width: 100%;
+  position: relative;
+  z-index: 1002;
+}
+
+.mobile-menu-items .menu-item:active {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+@media (max-width: 768px) {
+  .mobile-menu {
+    width: 70%;
+  }
+}
+
+@media (max-width: 480px) {
+  .mobile-menu {
+    width: 80%;
+  }
+} 
+
+.mobile-menu-items a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 15px 0;
+  display: block;
+  cursor: pointer;
+} 
+
+/* Sembunyikan menu toggle di desktop */
+.menu-toggle {
+  display: none; /* Hidden by default */
+}
+
+/* Tampilkan hanya di mobile */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    border: none;
+    background: none;
+    padding: 10px;
+  }
 } 
