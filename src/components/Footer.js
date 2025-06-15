@@ -43,7 +43,7 @@ function Footer() {
         <div className="footer-section">
           <h3>Contact</h3>
           <p>Customer Service</p>
-          <p>Email: info@duta.co.id</p>
+          <p>Email: info@savory.co.id</p>
           <p>Phone: (021) 1234-5678</p>
         </div>
 
